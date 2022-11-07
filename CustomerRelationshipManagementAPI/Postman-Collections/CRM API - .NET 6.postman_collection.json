@@ -1,0 +1,707 @@
+{
+	"info": {
+		"_postman_id": "11ad30ec-bb47-4c5e-892e-d9ccccad0646",
+		"name": "CRM API - .NET 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8920848"
+	},
+	"item": [
+		{
+			"name": "Authenticaion | Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"Fawzi\",\r\n  \"email\": \"Fawzi@gmail.com\",\r\n  \"password\": \"Ff@1234\",\r\n  \"confirmPassword\": \"Ff@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Authenticate/Register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Authenticate",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Administration | Add Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRmF3emkiLCJqdGkiOiJjYThjN2Y0Mi03MzAyLTQxZTQtYWQ5YS1iNDNiZDE0OThlYmQiLCJlbWFpbCI6IkZhd3ppQGdtYWlsLmNvbSIsInVpZCI6IjkxYTEyMDFhLWVlYWEtNGVmOS1hZTVhLWNlNTlkNDU4YWNiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE2Njc1NjQyODcsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMjYiLCJhdWQiOiJDUk0tQVBJIn0.D2BOzb8thqQaV9ncMKuuI-FO9lTa6jB7Llc8cl1LGLA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"Fawzi\",\r\n  \"email\": \"Fawzi@gmail.com\",\r\n  \"password\": \"Ff@1234\",\r\n  \"confirmPassword\": \"Ff@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Administration/AddRole?roleName=Manager",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Administration",
+						"AddRole"
+					],
+					"query": [
+						{
+							"key": "roleName",
+							"value": "Manager"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Administration | Add User To Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSXNsYW1Pc2FtYSIsImp0aSI6ImQ3ZjUxZjU0LTIyNzgtNDNkMi04ZjhjLWYyZmEzMTFjODQyYSIsImVtYWlsIjoiSXNsYW1Pc2FtYUBnbWFpbC5jb20iLCJ1aWQiOiJkMmEwMWJjYy1hMTcwLTQ4MWEtYWJiNy1hMDc4ZmVkZjY3M2QiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwiZXhwIjoxNjY3NTY1NjM3LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MTI2IiwiYXVkIjoiQ1JNLUFQSSJ9.2E41oRHGEAqCqq56YVuI-RrrJtDlMJeAsQZMneN_Jak",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"Fawzi\",\r\n  \"email\": \"Fawzi@gmail.com\",\r\n  \"password\": \"Ff@1234\",\r\n  \"confirmPassword\": \"Ff@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Administration/AddUserRole?roleName=Admin&userName=ayaosama",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Administration",
+						"AddUserRole"
+					],
+					"query": [
+						{
+							"key": "roleName",
+							"value": "Admin"
+						},
+						{
+							"key": "userName",
+							"value": "ayaosama"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticaion | Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"islamosama\",\r\n  \"password\": \"Ii@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Authenticate/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Authenticate",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Files | Upload Customers Data Sheet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRmF3emkiLCJqdGkiOiIwMWJkNDM0MS1kNmZlLTQ1MzQtYWVkOS0yMmQxYmE5MTRjYmQiLCJlbWFpbCI6IkZhd3ppQGdtYWlsLmNvbSIsInVpZCI6IjkxYTEyMDFhLWVlYWEtNGVmOS1hZTVhLWNlNTlkNDU4YWNiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE2Njc1NjA3MTIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMjYiLCJhdWQiOiJDUk0tQVBJIn0.ySHq0EpOdiJo4vqDRs5numb6EVDvpoTNEnPHX7GF2Bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/CompuStore/Downloads/Documents/Customers.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/files",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | get cst details with requests",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRmF3emkiLCJqdGkiOiIwMWJkNDM0MS1kNmZlLTQ1MzQtYWVkOS0yMmQxYmE5MTRjYmQiLCJlbWFpbCI6IkZhd3ppQGdtYWlsLmNvbSIsInVpZCI6IjkxYTEyMDFhLWVlYWEtNGVmOS1hZTVhLWNlNTlkNDU4YWNiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE2Njc1NjA3MTIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMjYiLCJhdWQiOiJDUk0tQVBJIn0.ySHq0EpOdiJo4vqDRs5numb6EVDvpoTNEnPHX7GF2Bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers/1?includeRequests=true",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers",
+						"1"
+					],
+					"query": [
+						{
+							"key": "includeRequests",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | get cst details only",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | get all customers with pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers?PageNumber=2&PageSize=15",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers"
+					],
+					"query": [
+						{
+							"key": "PageNumber",
+							"value": "2"
+						},
+						{
+							"key": "PageSize",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | get all customers with pagination & searching",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers?PageNumber=1&PageSize=15&searchQuery=9989",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers"
+					],
+					"query": [
+						{
+							"key": "PageNumber",
+							"value": "1"
+						},
+						{
+							"key": "PageSize",
+							"value": "15"
+						},
+						{
+							"key": "searchQuery",
+							"value": "9989"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | get all customers with pagination & filteration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers?PageNumber=1&PhoneNumber=1100000332&PageSize=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers"
+					],
+					"query": [
+						{
+							"key": "PageNumber",
+							"value": "1"
+						},
+						{
+							"key": "PhoneNumber",
+							"value": "1100000332"
+						},
+						{
+							"key": "PageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | get all customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | Delete cst",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | Add New Cst",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Safaa\",\r\n    \"lastName\": \"Abdullah\",\r\n    \"phoneNumber\": \"01150000922\",\r\n    \"birthdate\": \"1988-10-30\",\r\n    \"Email\":\"safaa.abdo@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | Update Cst Fully",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"firstName\": \"Hala\",\r\n    \"lastName\": \"Mahmoud\",\r\n    \"phoneNumber\": \"01178800118\",\r\n    \"email\": \"Hala.Mahmoud.HM@hotmail.com\",\r\n    \"birthdate\": \"1994-03-01\"\r\n }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers | Update Cst Partially",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " [\r\n     {\r\n        \"path\": \"/firstName\",\r\n        \"op\": \"replace\",\r\n        \"value\": \"Halah\"\r\n     },\r\n     {\r\n        \"path\": \"/lastName\",\r\n        \"op\": \"replace\",\r\n        \"value\": \"Mohammed\"\r\n     }\r\n ]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Customers/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Customers",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requests | Get All Requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Requests",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requests | Get All Requests With Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Requests?pageNumber=2&pageSize=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Requests"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "2"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requests | Get All With filter by request type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Requests?requestType=3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Requests"
+					],
+					"query": [
+						{
+							"key": "requestType",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requests | Get Single Request By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Requests/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Requests",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requests | Delete Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Requests/11",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Requests",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requests | Add Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiRmF3emkiLCJqdGkiOiIwMWJkNDM0MS1kNmZlLTQ1MzQtYWVkOS0yMmQxYmE5MTRjYmQiLCJlbWFpbCI6IkZhd3ppQGdtYWlsLmNvbSIsInVpZCI6IjkxYTEyMDFhLWVlYWEtNGVmOS1hZTVhLWNlNTlkNDU4YWNiMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE2Njc1NjA3MTIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMjYiLCJhdWQiOiJDUk0tQVBJIn0.ySHq0EpOdiJo4vqDRs5numb6EVDvpoTNEnPHX7GF2Bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"description\": \"Authentication request he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.\",\r\n  \"requestTypeId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Requests/17",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Requests",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Requests | Update Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"description\": \"Updated | stringstringstringstringstringstringstringstringst\",\r\n  \"requestTypeId\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{port_num}}/api/Requests/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port_num}}",
+					"path": [
+						"api",
+						"Requests",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port_num",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

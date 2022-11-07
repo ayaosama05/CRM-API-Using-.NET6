@@ -1,0 +1,3 @@
+﻿global using CustomerRelationshipManagementAPI.Core.Models;
+global using CustomerRelationshipManagementAPI.Core.Dtos;
+global using CustomerRelationshipManagementAPI.Core.Interfaces;
