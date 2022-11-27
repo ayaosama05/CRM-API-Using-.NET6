@@ -2,7 +2,7 @@
 # CRM-API-Using-.NET6
 Customer Replationship Management API Using .NET6 .
 
-## Architecture
+## Architecture and Features
 
 - User registration and Login via access token creation
 - Role-based authorization
